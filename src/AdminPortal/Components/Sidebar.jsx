@@ -16,8 +16,8 @@ const Sidebar = () => {
     { label: "Services", path: "/admin/services-main-page" },
     { label: "News", path: "news-main-page" },
     { label: "Voice of Farmers", path: "/admin/voice-of-farmaers-main-page" },
-    { label: "Reports", path: "/admin/reports" },
-    { label: "Communities", path: "/admin/communities" },
+    { label: "Reports", path: "/admin/reports-main-page" },
+    { label: "Communities", path: "/admin/commuities-main-page" },
     { label: "Resources", path: "/admin/resources-main-page" },
     { label: "Gallery", path: "/admin/gallery" },
   ];

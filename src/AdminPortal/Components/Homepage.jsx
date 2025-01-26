@@ -5,9 +5,9 @@ import HomePageHeader from "./HomePageHeader";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="px-4 md:px-0">
       <HomePageHeader />
-      <div className="relative">
+      <div className="relative ">
         {/* Text Section */}
         <div className="absolute top-2 md:left-8 text-left">
           <div className="mb-4">
@@ -42,7 +42,7 @@ const Homepage = () => {
         </div>
 
         {/* Login Section */}
-        <div className="text-right flex flex-col items-end">
+        <div className="text-right flex flex-col items-end md:px-4">
           <div className="relative w-full md:w-[622px]">
             {/* Login Section Container */}
             <div className="relative md:top-[-40px]">

@@ -30,15 +30,15 @@
 //           <h2 className="text-2xl md:text-[40px] mt-4 font-bold mb-6">
 //             How did the app begin (March 2020).
 //           </h2>
-//           <div className="flex items-center justify-start space-x-6 md:space-x-12 mt-2">
+//           <div className="flex items-center justify-start space-x-6 md:space-x-24 mt-2">
 //             <h1 className="text-sm md:text-[20px] ">Story by Farmnet</h1>
 //             <div className="flex items-center space-x-2 md:space-x-4">
-//               <div className="flex items-center space-x-1">
-//                 <span className="w-4 h-4 bg-black rounded-full inline-block"></span>
+//               <div className="flex items-center space-x-4">
+//                 <span className="w-[12px] h-[12px] bg-black rounded-full inline-block"></span>
 //                 <span className="text-sm md:text-[20px]">3h</span>
 //               </div>
 //               <div className="flex items-center space-x-1 text-green-700 font-medium">
-//                 <span className="w-4 h-4 bg-black rounded-full inline-block"></span>
+//                 <span className="w-[12px] h-[12px] bg-black rounded-full inline-block"></span>
 //                 <div className="flex items-center space-x-1">
 //                   <img src={clock} alt="clock" className="ml-2" />
 //                   <h1 className="text-sm md:text-[20px]">2 min read</h1>

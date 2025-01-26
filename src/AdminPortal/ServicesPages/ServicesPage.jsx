@@ -5,11 +5,11 @@ const ServicesPage = () => {
   const [selectedSection, setSelectedSection] = useState("crops");
 
   return (
-    <div className="font-Inter px-6 md:px-8">
+    <div className="font-Inter px-6 md:px-8 overflow-x-auto">
       <div className="flex flex-col gap-4 lg:flex-row mb-12 items-center md:mb-6"></div>
 
       {/* Progress Bar Section */}
-      <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-8">
+      <div className="flex flex-row  space-x-4 md:mb-8">
         <div
           className="w-full md:w-[50%] cursor-pointer"
           onClick={() => setSelectedSection("crops")}
@@ -44,32 +44,28 @@ const ServicesPage = () => {
       </div>
 
       {/* Button Section */}
-      <div className="flex flex-col items-center w-full gap-2 mb-8 md:flex-row md:gap-4  mt-1">
+      <div className="flex items-center w-full gap-2 mb-8 flex-row md:gap-4 mt-4">
         {/* Mobile App Div */}
-        <div className="bg-[#155528] border-[#979797] border-b-[3px] rounded-md p-2 md:p-4 box-border w-full flex items-center justify-center">
-          <b className="text-white text-center text-sm md:text-[24px]">
+        <div className="flex-col bg-[#155528] border-[#979797] border-b-[3px] rounded-md p-2 md:p-4 box-border w-full h-[62px] flex items-center justify-center">
+          <h1 className="text-white text-center font-bold text-[12px] md:text-[24px]">
             MOBILE APP
-            <br />
-            <span className="text-xs md:text-[20px] font-normal text-white">
-              Demos
-            </span>
-          </b>
+          </h1>
+          <h1 className="text-xs md:text-[20px] font-normal text-white">
+            Demos
+          </h1>
         </div>
 
         {/* Farming Div */}
-        <div className="bg-[#CFD7D7] border-[#979797] border-b-[3px] rounded-md p-2 md:p-4 box-border w-full flex items-center justify-center">
-          <b className="text-[#000] text-center text-sm md:text-[24px]">
+        <div className="flex-col bg-[#CFD7D7] border-[#979797] border-b-[3px] rounded-md p-2 md:p-4 box-border w-full h-[62px] flex items-center justify-center">
+          <h1 className=" text-center text-[12px] md:text-[24px] font-bold">
             FARMING
-            <br />
-            <span className="text-xs md:text-[20px] font-normal text-[#000]">
-              Demos
-            </span>
-          </b>
+          </h1>
+          <h1 className="text-xs md:text-[20px] font-normal ">Demos</h1>
         </div>
 
         {/* Placeholder Div */}
-        <div className="bg-[#CFD7D7] border-[#979797] border-b-[3px] rounded-md p-4 box-border w-full flex items-center justify-center">
-          <b className="text-[#000] text-center text-sm md:text-base lg:text-4xl">
+        <div className="bg-[#CFD7D7] border-[#979797] border-b-[3px] rounded-md p-4 box-border w-full h-[62px] flex items-center justify-center">
+          <b className="text-[#000] text-center text-[12px] md:text-base lg:text-4xl">
             -
             <br />
             <span className="text-xs sm:text-sm font-semibold text-[#000]"></span>
