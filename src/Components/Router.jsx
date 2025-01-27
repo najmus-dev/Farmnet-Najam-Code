@@ -148,6 +148,7 @@ import CommunitiesPage2 from "../AdminPortal/CommunitiesPages/CommunitiesPage2";
 import AdminReportMainPage from "../AdminPortal/ReportsPages/AdminReportMainPage";
 import AdminBuyPage from "../AdminPortal/Components/AdminBuyPage";
 import AdminProfile from "../AdminPortal/ServicesPages/AdminProfile";
+import FarmingDemoPage1 from "../AdminPortal/ServicesPages/FarmingDemoPage1";
 
 // Layout Component for Main Routes
 const MainLayout = () => {
@@ -168,16 +169,22 @@ const AdminLayout = () => {
   const isCommunitiesPage1 = location.pathname === "/admin/communities-page-1";
   const isCommunitiesPage1b =
     location.pathname === "/admin/communities-page-1b";
+  const isAdminBuyPage = location.pathname === "/admin/buy-page";
+  const FarmingDemoPage1 = location.pathname === "/admin/farming-demo-page-1";
 
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-col md:flex-row w-full min-h-screen">
         {/* Sidebar */}
-        {!isAdminProfilePage && !isCommunitiesPage1 && !isCommunitiesPage1b && (
-          <div className="w-full md:w-[400px] bg-white flex-shrink-0">
-            <Sidebar />
-          </div>
-        )}
+        {!isAdminProfilePage &&
+          !isCommunitiesPage1 &&
+          !isCommunitiesPage1b &&
+          !isAdminBuyPage &&
+          !FarmingDemoPage1 && (
+            <div className="w-full md:w-[400px] bg-white flex-shrink-0">
+              <Sidebar />
+            </div>
+          )}
 
         {/* Main content */}
         <div className="flex-1 flex flex-col">
@@ -254,6 +261,7 @@ const Router = () => {
           <Route path="reports-main-page" element={<AdminReportMainPage />} />
           <Route path="buy-page" element={<AdminBuyPage />} />
           <Route path="profile-page" element={<AdminProfile />} />
+          <Route path="farming-demo-page-1" element={<FarmingDemoPage1 />} />
         </Route>
 
         {/* Main routes */}
