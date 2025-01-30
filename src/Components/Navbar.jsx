@@ -107,7 +107,7 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="/ServicesPage"
+            href="/solutios-page"
             className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Services"
                 ? "bg-[#155528] text-white"
@@ -241,7 +241,7 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="/ServicesPage"
+            href="/solutios-page"
             className="block px-4 py-2 hover:bg-gray-600"
             onClick={() => handleMenuClick("Services")}
           >

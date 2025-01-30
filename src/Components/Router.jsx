@@ -149,6 +149,14 @@ import AdminReportMainPage from "../AdminPortal/ReportsPages/AdminReportMainPage
 import AdminBuyPage from "../AdminPortal/Components/AdminBuyPage";
 import AdminProfile from "../AdminPortal/ServicesPages/AdminProfile";
 import FarmingDemoPage1 from "../AdminPortal/ServicesPages/FarmingDemoPage1";
+import AdminTermsandCondition from "../AdminPortal/Settings/TermsandCondition";
+import AdminSettingPage from "../AdminPortal/Settings/SettingPage";
+import AdminPrivacyPolicy from "../AdminPortal/Settings/PrivacyPolicy";
+import AdminDataUsage from "../AdminPortal/Settings/DataUsage";
+import AdminFaqs from "../AdminPortal/Settings/Faqs";
+import AdminContactUs from "../AdminPortal/Components/ContactUs";
+import AdminLicense from "../AdminPortal/Settings/License";
+import AdminGallery from "../AdminPortal/Gallery/Gallery";
 
 // Layout Component for Main Routes
 const MainLayout = () => {
@@ -262,6 +270,17 @@ const Router = () => {
           <Route path="buy-page" element={<AdminBuyPage />} />
           <Route path="profile-page" element={<AdminProfile />} />
           <Route path="farming-demo-page-1" element={<FarmingDemoPage1 />} />
+          <Route path="datausage" element={<AdminDataUsage />} />
+          <Route path="faqs" element={<AdminFaqs />} />
+          <Route path="contactus" element={<AdminContactUs />} />
+          <Route path="license" element={<AdminLicense />} />
+          <Route path="gallery" element={<AdminGallery />} />
+          <Route
+            path="termsandcondition"
+            element={<AdminTermsandCondition />}
+          />
+          <Route path="settingPage" element={<AdminSettingPage />} />
+          <Route path="privacypolicy" element={<AdminPrivacyPolicy />} />
         </Route>
 
         {/* Main routes */}
@@ -290,7 +309,7 @@ const Router = () => {
           <Route path="/reset" element={<ResetPassword />} />
           <Route path="/recover" element={<Recover />} />
 
-          <Route path="/ServicesPage" element={<ServicesPage />} />
+          <Route path="/solutios-page" element={<ServicesPage />} />
           <Route path="/ReportPage" element={<ReportPage />} />
           <Route path="/about" element={<TermsandConditions />} />
           <Route path="/login" element={<LogIn />} />

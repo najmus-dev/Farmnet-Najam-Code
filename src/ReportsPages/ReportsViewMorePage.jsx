@@ -7,7 +7,7 @@ const ReportsViewMorePage = () => {
     <div className="p-4 md:p-8 mt-4 font-Inter overflow-x-auto">
       {/* Title */}
       <div className="mb-6">
-        <h1 className="text-[#155528] font-bold text-2xl md:text-[36px]">
+        <h1 className="text-[#155528] font-bold text-3xl sm:text-2xl md:text-[36px]">
           REPORTS
         </h1>
       </div>
@@ -17,13 +17,15 @@ const ReportsViewMorePage = () => {
           <div className="flex items-center justify-center space-x-12">
             <div className="flex space-x-12 md:space-x-0 mb-2 md:mb-0">
               <div className="flex items-center justify-center md:space-x-32">
-                <h1 className="text-2xl md:text-[40px] font-bold text-[#919291]">
+                <h1 className="font-semibold text-3xl sm:text-2xl md:text-[36px] text-[#919291]">
                   INPUTS
                 </h1>
                 <IoMdArrowDropdown className="text-[20px] md:text-[50px]" />
               </div>
               <div className="flex items-center justify-center md:space-x-12">
-                <h1 className="text-2xl md:text-[40px] font-bold">| SEEDS</h1>
+                <h1 className="font-bold text-3xl sm:text-2xl md:text-[36px]">
+                  | SEEDS
+                </h1>
                 <IoMdArrowDropdown className="text-[20px] md:text-[50px]" />
               </div>
             </div>
@@ -51,55 +53,55 @@ const ReportsViewMorePage = () => {
       </div>
       <div className="font-Poppins">
         <div className="flex flex-col md:flex-row md:justify-between mt-10">
-          <h1 className="text-3xl mb-4 md:mb-0 md:text-[36px] font-bold">
+          <h1 className="font-semibold text-3xl sm:text-2xl md:text-[36px]">
             MAIZE
           </h1>
           <div className="flex space-x-3">
-            <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+            <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
               Farmers
             </h1>
-            <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+            <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
               2500
             </h1>
           </div>
         </div>
         <div className="flex items-center justify-end space-x-4 mt-12 font-Inter text-[#919291]">
-          <h1 className=" w-1/2 md:w-[440px] h-[39px] md:h-[49px] text-2xl md:text-[36px] font-semibold">
+          <h1 className=" w-1/2 md:w-[440px] h-[39px] md:h-[49px] text-2xl md:text-[36px] font-semisemibold">
             Variety
           </h1>
-          <h1 className=" w-1/2 md:w-[440px] h-[39px] md:h-[49px] text-2xl md:text-[36px] font-semibold">
+          <h1 className=" w-1/2 md:w-[440px] h-[39px] md:h-[49px] text-2xl md:text-[36px] font-semisemibold">
             Quantity
           </h1>
         </div>
         <div className="flex justify-end space-x-3 ">
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             Zea Mais
           </h1>
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             2500
           </h1>
         </div>
         <div className="flex justify-end space-x-3 mt-2">
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             Zea Mais
           </h1>
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             2500
           </h1>
         </div>
         <div className="flex justify-end space-x-3 mt-2">
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             Zea Mais
           </h1>
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             2500
           </h1>
         </div>
         <div className="flex justify-end space-x-3 mt-2">
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             Zea Mais
           </h1>
-          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-bold">
+          <h1 className="bg-[#F3F5F5] w-1/2 h-[50px] md:w-[440px] md:h-[79px] text-2xl md:text-[36px] flex items-center justify-center rounded-md font-semibold">
             2500
           </h1>
         </div>

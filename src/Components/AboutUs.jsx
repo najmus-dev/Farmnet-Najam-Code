@@ -13,7 +13,8 @@ const AboutUs = () => {
           <h1 className="text-[22px] md:text-[48px] font-bold mb-3 md:mb-3">
             Securing Agriculture in Namibia
           </h1>
-          <p className=" text-[18px] md:text-[23px] text-justify md:text-left ">
+          {/* <p className=" text-[18px] md:text-[23px] text-justify md:text-left "> */}
+          <p className=" md:font-medium md:text-[26px] md:leading-8 text-justify md:text-left ">
             To secure agriculture in Namibia, the country is exploring
             strategies such as diversifying agriculture, modernizing
             productivity, and addressing food insecurity. The Comprehensive
