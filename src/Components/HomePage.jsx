@@ -5,16 +5,22 @@ import Services from "./Services";
 import Stories from "./Stories";
 import Subscription from "./Subscription";
 import NewsSection from "./NewsSection";
+import AgritechSection from './AgritechSection'
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <AboutUs />
+      <AgritechSection/>
       <Services />
-      <NewsSection />
+      {/* <AboutUs /> */}
       <Stories />
-      <Subscription />
+      <NewsSection />
+     
+     
+     
+{/*       
+      <Subscription /> */}
     </div>
   );
 };

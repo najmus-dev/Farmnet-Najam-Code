@@ -86,206 +86,285 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white py-4">
-      <div className="flex items-center  justify-between space-x-20 px-2">
-        {/* Logo */}
-        <div>
-          <img src={logo} alt="Logo" className="h-[42px] w-[160px]" />
-        </div>
-
-        {/* Menu items */}
-        <div className="hidden md:flex  space-x-2 font-Inter items-center justify-center text-center font-semibold">
-          <a
-            href="/"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Home"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Home")}
-          >
-            Home
-          </a>
-          <a
-            href="/solutios-page"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Services"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Services")}
-          >
-            Solutions
-          </a>
-          <a
-            href="/ReportPage"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Reports"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Reports")}
-          >
-            Reports
-          </a>
-          <a
-            href="/communities"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Communities"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Communities")}
-          >
-            Communities
-          </a>
-          <a
-            href="/resources-main-page"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Resources"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Resources")}
-          >
-            Resources
-          </a>
-          <a
-            href="/gallery"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Gallery"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Gallery")}
-          >
-            Gallery
-          </a>
-          <a
-            href="login"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
-              selectedMenu === "Login"
-                ? "bg-[#155528] text-white"
-                : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
-            }`}
-            onClick={() => handleMenuClick("Login")}
-          >
-            Log-In App
-          </a>
-          <div className="relative">
-            {/* Navbar Button with Selected Flag */}
-            <button
-              onClick={toggleDropdown}
-              className="hover:text-green-900 flex items-center"
-            >
-              <img
-                src={selectedFlag}
-                alt="Selected Flag"
-                className="h-[46px] w-[50px] ml-4"
-              />
-              <IoMdArrowDropdown className="" size={20} />
-            </button>
-
-            {/* Dropdown */}
-            {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50">
-                {countries.map((country, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleFlagSelect(country.flag)}
-                    className="flex items-center px-4 py-2 text-black hover:bg-gray-200 w-full"
-                  >
-                    <img
-                      src={country.flag}
-                      alt={country.name}
-                      className="h-6 w-8 mr-2"
-                    />
-                    {country.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 rounded bg-green-900 text-white focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            className="h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-            />
-          </svg>
-        </button>
+    <nav className="bg-[#152C24] py-3 px-12 flex justify-between items-center">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img src={logo} alt="FarmNet Logo" className="h-[40px]" />
       </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-green-900 text-white">
-          <a
-            href="/"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Home")}
-          >
-            Home
-          </a>
-          <a
-            href="/solutios-page"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Services")}
-          >
-            Solutions
-          </a>
-          <a
-            href="/ReportPage"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Reports")}
-          >
-            Reports
-          </a>
-          <a
-            href="/communities"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Communities")}
-          >
-            Communities
-          </a>
-          <a
-            href="/resources-main-page"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Resources")}
-          >
-            Resources
-          </a>
-          <a
-            href="/gallery"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Gallery")}
-          >
-            Gallery
-          </a>
-          <a
-            href="#login"
-            className="block px-4 py-2 hover:bg-gray-600"
-            onClick={() => handleMenuClick("Login")}
-          >
-            Log-In App
-          </a>
-        </div>
-      )}
+      {/* Navigation Links */}
+      <div className="flex space-x-6">
+        <a
+          href="/"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Home
+        </a>
+        <a
+          href="/services"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Services
+        </a>
+        <a
+          href="/reports"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Reports
+        </a>
+        <a
+          href="/communities"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Communities
+        </a>
+        <a
+          href="/resources"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Resources
+        </a>
+        <a
+          href="/gallery"
+          className="text-white flex items-center justify-center bg-[#155528] p-2 text-[24px] h-[40px] w-[157px] rounded-md hover:text-white font-bold"
+        >
+          Gallery
+        </a>
+      </div>
+
+      {/* Flag Dropdown */}
+      <div className="relative">
+        {/* Navbar Button with Selected Flag */}
+        <button
+          onClick={toggleDropdown}
+          className="hover:text-green-900 flex items-center"
+        >
+          <img
+            src={selectedFlag}
+            alt="Selected Flag"
+            className="h-[46px] w-[50px] ml-4"
+          />
+          <IoMdArrowDropdown className="text-white" size={20} />
+        </button>
+
+        {/* Dropdown */}
+        {isDropdownOpen && (
+          <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50">
+            {countries.map((country, index) => (
+              <button
+                key={index}
+                onClick={() => handleFlagSelect(country.flag)}
+                className="flex items-center px-4 py-2 text-black hover:bg-gray-200 w-full"
+              >
+                <img
+                  src={country.flag}
+                  alt={country.name}
+                  className="h-6 w-8 mr-2"
+                />
+                {country.name}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // <nav className="bg-[#152C24] text-white py-4">
+    //   <div className="flex items-center justify-between space-x-20 px-8">
+    //     {/* Logo */}
+    //     <div>
+    //       <img src={logo} alt="Logo" className="h-[42px] w-[160px]" />
+    //     </div>
+
+    //     {/* Menu items */}
+    //     <div className="hidden md:flex  space-x-2 font-Inter items-center justify-center text-center font-semibold">
+    //       <a
+    //         href="/"
+    //         className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Home")}
+    //       >
+    //         Home
+    //       </a>
+          // <a
+          //   href="/solutios-page"
+          //   // className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+          //   //   selectedMenu === "Services"
+          //   //     ? "bg-[#155528] text-white"
+          //   //     : "bg-[#F3F5F5] hover:bg-green-900 hover:text-white"
+          //   // }`}
+          //     className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+          //   onClick={() => handleMenuClick("Services")}
+          // >
+          //   Solutions
+          // </a>
+    //       <a
+    //         href="/ReportPage"
+    //          className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Reports")}
+    //       >
+    //         Reports
+    //       </a>
+    //       <a
+    //         href="/communities"
+    //          className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Communities")}
+    //       >
+    //         Communities
+    //       </a>
+    //       <a
+    //         href="/resources-main-page"
+    //          className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Resources")}
+    //       >
+    //         Resources
+    //       </a>
+    //       <a
+    //         href="/gallery"
+    //          className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Gallery")}
+    //       >
+    //         Gallery
+    //       </a>
+    //       <a
+    //         href="login"
+    //         className="p-2 text-[18px] h-[40px] w-[157px] rounded-md bg-[#155528] text-white"
+    //         onClick={() => handleMenuClick("Login")}
+    //       >
+    //         Log-In App
+    //       </a>
+    //       <div className="relative">
+    //         {/* Navbar Button with Selected Flag */}
+    //         <button
+    //           onClick={toggleDropdown}
+    //           className="hover:text-green-900 flex items-center"
+    //         >
+    //           <img
+    //             src={selectedFlag}
+    //             alt="Selected Flag"
+    //             className="h-[46px] w-[50px] ml-4"
+    //           />
+    //           <IoMdArrowDropdown className="" size={20} />
+    //         </button>
+
+    //         {/* Dropdown */}
+    //         {isDropdownOpen && (
+    //           <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50">
+    //             {countries.map((country, index) => (
+    //               <button
+    //                 key={index}
+    //                 onClick={() => handleFlagSelect(country.flag)}
+    //                 className="flex items-center px-4 py-2 text-black hover:bg-gray-200 w-full"
+    //               >
+    //                 <img
+    //                   src={country.flag}
+    //                   alt={country.name}
+    //                   className="h-6 w-8 mr-2"
+    //                 />
+    //                 {country.name}
+    //               </button>
+    //             ))}
+    //           </div>
+    //         )}
+    //       </div>
+    //     </div>
+
+    //     {/* Mobile menu button */}
+    //     <button
+    //       className="md:hidden p-2 rounded bg-green-900 text-white focus:outline-none"
+    //       onClick={() => setIsMenuOpen(!isMenuOpen)}
+    //     >
+    //       <svg
+    //         className="h-6 w-6"
+    //         xmlns="http://www.w3.org/2000/svg"
+    //         fill="none"
+    //         viewBox="0 0 24 24"
+    //         stroke="currentColor"
+    //       >
+    //         <path
+    //           strokeLinecap="round"
+    //           strokeLinejoin="round"
+    //           strokeWidth="2"
+    //           d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+    //         />
+    //       </svg>
+    //     </button>
+    //   </div>
+
+    //   {/* Mobile menu */}
+    //   {isMenuOpen && (
+    //     <div className="md:hidden bg-green-900 text-white">
+    //       <a
+    //         href="/"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Home")}
+    //       >
+    //         Home
+    //       </a>
+    //       <a
+    //         href="/solutios-page"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Services")}
+    //       >
+    //         Solutions
+    //       </a>
+    //       <a
+    //         href="/ReportPage"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Reports")}
+    //       >
+    //         Reports
+    //       </a>
+    //       <a
+    //         href="/communities"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Communities")}
+    //       >
+    //         Communities
+    //       </a>
+    //       <a
+    //         href="/resources-main-page"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Resources")}
+    //       >
+    //         Resources
+    //       </a>
+          // <a
+          //   href="/gallery"
+          //   className="block px-4 py-2 hover:bg-gray-600"
+          //   onClick={() => handleMenuClick("Gallery")}
+          // >
+          //   Gallery
+          // </a>
+    //       <a
+    //         href="#login"
+    //         className="block px-4 py-2 hover:bg-gray-600"
+    //         onClick={() => handleMenuClick("Login")}
+    //       >
+    //         Log-In App
+    //       </a>
+    //     </div>
+    //   )}
+    // </nav>
